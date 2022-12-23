@@ -6,10 +6,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
+import org.springframework.data.redis.core.index.Indexed;
 
 import java.io.Serializable;
 
-@RedisHash(value = "cache-book", timeToLive = 600)
+@RedisHash(value = "repository-book", timeToLive = 600)
 @Data
 @Builder
 @NoArgsConstructor
@@ -18,6 +19,8 @@ public class CacheBook implements Serializable {
 
     @Id
     private Long userId;
+
+    @Indexed
 
     private String name;
 

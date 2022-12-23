@@ -5,12 +5,14 @@ import com.ken.redisrepositorysample.repository.BookRepository;
 import com.ken.redisrepositorysample.repository.CacheBookRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Slf4j
 @Service
+@PropertySource()
 public class BookService {
     private static final String CACHE = "repository-book";
     @Autowired

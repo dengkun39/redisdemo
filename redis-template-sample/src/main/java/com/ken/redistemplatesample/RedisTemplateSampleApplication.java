@@ -43,11 +43,11 @@ public class RedisTemplateSampleApplication  implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         Optional<Book> bookOptional = bookService.findOneBook("python");
-        Optional<Book> bookOptional2 = bookService.findOneBook("python");
+        Optional<Book> bookOptional2 = bookService.findOneBook("apache kafka");
 
         bookService.getBookString("python");
 
-        bookService.getBookString("python");
+        bookService.getBookString("apache kafka");
 
 
 
