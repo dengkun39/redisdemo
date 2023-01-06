@@ -16,7 +16,8 @@
 		<module>actuator-demo</module>
         <module>bookshop-service</module>
         <module>bookcustomer-service</module>
-    </modules>
+		<module>resilience4j-bookcustomer-service</module>
+	</modules>
 	<properties>
 		<java.version>19</java.version>
 		<spring-cloud.version>2022.0.0</spring-cloud.version>

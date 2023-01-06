@@ -2,6 +2,7 @@ package com.ken.bookshop.controller;
 
 import com.ken.bookshop.model.Book;
 import com.ken.bookshop.service.BookService;
+import com.ken.bookshop.support.BookProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,9 +27,17 @@ public class BookController {
         return bookService.getAllBook();
     }
 
+    @Autowired
+    private BookProperties bookProperties;
+    @GetMapping(path = "/getDiscount")
+    public Integer getDiscount() {
+        return bookProperties.getDiscount();
+    }
+
     @GetMapping("/{id}")
     public Optional<Book> getById(@PathVariable Long id) {
         Optional<Book> book = bookService.getBook(id);
+
         return book;
     }
 
