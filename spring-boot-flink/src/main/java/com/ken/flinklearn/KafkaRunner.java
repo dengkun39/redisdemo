@@ -14,7 +14,7 @@ import org.springframework.boot.ApplicationRunner;
 
 import java.util.Properties;
 
-@Component
+//@Component
 @Slf4j
 public class KafkaRunner implements ApplicationRunner
 {

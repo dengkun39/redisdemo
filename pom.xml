@@ -17,6 +17,7 @@
         <module>bookshop-service</module>
         <module>bookcustomer-service</module>
 		<module>resilience4j-bookcustomer-service</module>
+		<module>proxy-demo</module>
 	</modules>
 	<properties>
 		<java.version>19</java.version>
